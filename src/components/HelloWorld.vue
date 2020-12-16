@@ -140,7 +140,7 @@ h1{
   width: 800px;
   margin: auto;
   transform: translateY(-2%);
-  gap: 20px;
+  grid-gap: 20px;
   animation: enter .4s 1 linear forwards;
   opacity: 0;
   transform: translateY(-5%)
