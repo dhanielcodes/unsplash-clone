@@ -6,10 +6,6 @@ export const router = createRouter({
             path: '/',
             component: () => import("@/components/HelloWorld.vue")
         },
-        {
-            path: '/search',
-            component: () => import("@/components/Search.vue")
-        }
     ],
     history: createWebHistory()
 })
