@@ -8,6 +8,7 @@
       </div>
     </form>
     <div v-else>
+      <button @click="searched = true">Search</button>
       <h1 class="searched" v-if="searching">Searching for <span> "{{inputed}}"</span></h1>
       <h1 class="searched" v-else>Search Results for <span> "{{inputed}}"</span></h1>
     </div>
@@ -190,6 +191,16 @@ h1{
 }
 .searched span{
   color: #88898c;
+}
+.search button{
+  width: 150px;
+  margin-left: 5%;
+  padding: 15px 15px;
+  border: none;
+  background: grey;
+  color: white;
+  outline: none;
+  cursor: pointer  
 }
 
 .hello, .load{
