@@ -15,48 +15,13 @@
 
   </div>
   <div v-if="loading" class="load">
-    <div class="card">
+    <div class="card" v-for="(index) in 7" :key="index">
       <div class="context">
         <div></div>
         <div></div>
       </div>
     </div>
-     <div class="card">
-      <div class="context">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-     <div class="card">
-      <div class="context">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-     <div class="card">
-      <div class="context">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-     <div class="card">
-      <div class="context">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-     <div class="card">
-      <div class="context">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-     <div class="card">
-      <div class="context">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
+     
   </div>
   <div v-else class="hello">
     <div @click="openModal(item.urls.regular, item.user.name, item.user.location)" class="card" v-for="(item, index) in gns" :key="index">
@@ -150,9 +115,14 @@ export default {
 *{
   color: white
 }
+.form{
+  width: 100%;
+  max-width: 1400px;
+}
 .search{
   background: #dde2e9;
   padding: 100px 0;
+  width: 100%;
 }
 .search img{
   width: 20px;
@@ -165,7 +135,7 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 95%;
   height: 50px;
   background: white;
   padding: 10px;
@@ -195,6 +165,7 @@ h1{
 .search button{
   width: 150px;
   margin-left: 5%;
+  margin-bottom: 20px;
   padding: 15px 15px;
   border: none;
   background: grey;
@@ -207,9 +178,10 @@ h1{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 95%;
+  max-width: 1400px;
   margin: auto;
   transform: translateY(-2%);
-  grid-gap: 20px;
+  grid-gap: 40px;
   animation: enter .4s 1 linear forwards;
   opacity: 0;
   transform: translateY(-5%)
